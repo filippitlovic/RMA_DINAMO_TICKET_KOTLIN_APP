@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/personFragment">
+
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="hr.ferit.buyticketandroidappkotlin.ui.profile.PersonFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_person">
+        <action android:id="@+id/action_fromqr_to_person_fragment"
+            app:destination="@+id/qrScannerFragment"/>
+        <argument
+            android:name="personItemId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/qrScannerFragment"
+        android:name="hr.ferit.buyticketandroidappkotlin.ui.profile.QRScannerFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragmet_qrscanner" >
+        <action android:id="@+id/action_fromqr_to_person_fragment"
+            app:destination="@+id/personFragment"/>
+        <argument
+            android:name="itemId"
+            app:argType="string" />
+    </fragment>
+</navigation>

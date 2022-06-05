@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "207063224812",
+    "project_id": "android-ticket-app",
+    "storage_bucket": "android-ticket-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:207063224812:android:df98dedaacf0ea12c030c9",
+        "android_client_info": {
+          "package_name": "hr.ferit.buyticketandroidappkotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "207063224812-pgp2tpkrjf6ql6fom90vkijeougoaq3u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu8eOjaJM0T91Vchmpz-FvOxBR-9malhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "207063224812-pgp2tpkrjf6ql6fom90vkijeougoaq3u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

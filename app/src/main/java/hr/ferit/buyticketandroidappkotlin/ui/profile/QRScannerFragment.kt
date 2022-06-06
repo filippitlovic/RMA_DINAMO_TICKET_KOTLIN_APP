@@ -92,15 +92,6 @@ class QRScannerFragment : Fragment() {
 
     }
 
-    /*private fun updateData(bonusPoints: Int) {
-        var bonus = bonusPoints
-        val user = mapOf<String,String>(
-            "bonusPoints" to bonus
-        )
-          // database.child(username).updateChildren(user).addOnSuccessListener {
-
-        //}
-    }*/
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, @Nullable data: Intent?) {
         val result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
@@ -135,23 +126,7 @@ class QRScannerFragment : Fragment() {
     private var ticketName = ""
     private var ticketDescription = ""
     private fun validateData() {
-        //input data
-        if(scannedValue == 1){
-            ticketDescription = "Tribina JUG"
-        }
-        if(scannedValue == 2){
-            ticketDescription = "Tribina ISTOK"
-        }
-        if(scannedValue == 3){
-            ticketDescription = "Tribina ZAPAD"
-        }
-        if(scannedValue == 4){
-            ticketDescription = "Tribina SJEVER"
-        }
-        //ticketId = binding.passwordET.text.toString().trim()
-        //validate data
         addToDatabase()
-
     }
 
 
@@ -165,7 +140,6 @@ class QRScannerFragment : Fragment() {
         }
         ticketId = checkTicketId()
         ticketName = "Ulaznica "+ ticketId
-
 
         database =
             FirebaseDatabase.getInstance(" https://android-ticket-app-default-rtdb.europe-west1.firebasedatabase.app")

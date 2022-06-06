@@ -34,7 +34,6 @@ class PersonFragment : Fragment() {
 
         _binding = FragmentPersonBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        //binding.textView.text = requireArguments().getString("itemId").toString()
 
         firebaseAuth = FirebaseAuth.getInstance()
         val firebaseUser = firebaseAuth.currentUser

@@ -105,16 +105,16 @@
         android:id="@+id/btnAcceptBonus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/blue"
         android:gravity="center"
         android:text="Prihvati bonus"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textScanResult"
-        android:layout_marginLeft="150dp"
-        android:backgroundTint="@color/blue"/>
+        app:layout_constraintHorizontal_bias="0.661"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

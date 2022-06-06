@@ -1,18 +1,15 @@
 package hr.ferit.buyticketandroidappkotlin
 
 import android.app.ProgressDialog
-import android.content.ContentValues
-import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.util.Patterns
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.ktx.Firebase
+import hr.ferit.buyticketandroidappkotlin.Model.User
 import hr.ferit.buyticketandroidappkotlin.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -40,7 +37,7 @@ class RegisterActivity : AppCompatActivity() {
 
         //back button click
         binding.backBTN.setOnClickListener{
-            onBackPressed() //ide na prosli ekran
+            onBackPressed()
         }
 
         //registracija
@@ -73,22 +70,6 @@ class RegisterActivity : AppCompatActivity() {
             createUserAccount()
         }
     }
-        /*if(email.isNotEmpty() && password.isNotEmpty()){
-            firebaseAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(LoginActivity()) {
-                task ->
-                if(task.isSuccessful){
-                    Toast.makeText(this,"User added",Toast.LENGTH_SHORT).show()
-
-                }else{
-
-                    Toast.makeText(this,task.exception!!.message,Toast.LENGTH_SHORT).show()
-                }
-            }
-        }else{
-            Toast.makeText(this,"ne valja pass il loz",Toast.LENGTH_SHORT).show()
-
-        }*/
-
 
     private fun createUserAccount() {
         ///kreiraj acc - firebase
@@ -99,7 +80,6 @@ class RegisterActivity : AppCompatActivity() {
         firebaseAuth.createUserWithEmailAndPassword(email,password).addOnSuccessListener {
             progressDialog.dismiss()
             Toast.makeText(this,"Registracija je uspješna",Toast.LENGTH_SHORT).show()
-            //updateUserInfo()
             addToDatabase()
             startActivity(Intent(this,LoginActivity::class.java))
         }.addOnFailureListener {
@@ -116,9 +96,7 @@ class RegisterActivity : AppCompatActivity() {
              .getReference("Users")
      val User = User(name, email, "0",uid)
      database.child(name).setValue(User).addOnSuccessListener {
-         Toast.makeText(this, "Upisano u bazu", Toast.LENGTH_SHORT).show()
      }.addOnFailureListener {
-         Toast.makeText(this, "Greška prilikom upisa u bazu", Toast.LENGTH_SHORT).show()
      }
     }
 }

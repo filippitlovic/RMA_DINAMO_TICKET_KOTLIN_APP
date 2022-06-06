@@ -16,14 +16,15 @@
         android:src="@drawable/logo"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/logoIV"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
-        android:text="GNK DINAMO TICKET"
+        android:text="GNK DINAMO PORTAL"
+        android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="26sp"/>
+        android:textSize="26sp" />
 
     <Button
         android:id="@+id/loginBTN"

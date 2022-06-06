@@ -40,8 +40,6 @@ class PersonFragment : Fragment() {
         val firebaseUser = firebaseAuth.currentUser
         val email = firebaseUser?.email
         val id = firebaseUser?.uid
-        val personViewModel =
-            ViewModelProvider(this).get(PersonViewModel::class.java)
 
         binding.emailDataTV.text = email.toString()
         database =
@@ -70,20 +68,23 @@ class PersonFragment : Fragment() {
                         sbName.append("$name")
                         sbBonus.append("$bonusPoints")
                         username = name.toString()
+                        checkInit()
                     }
                 }
             }
         }
 
-        if (this::username.isInitialized) {
-            binding.nameDataTV.text = username
-            binding.bonusPointsDataTV.text = bonusPoints.toString()
-        }
         database.addValueEventListener(getData)
         database.addListenerForSingleValueEvent(getData)
         return root
     }
 
+    private fun checkInit(){
+        if (this::username.isInitialized) {
+            binding.nameDataTV.text = username
+            binding.bonusPointsDataTV.text = bonusPoints.toString()
+        }
+    }
     private fun addAllBonusPoints() {
         firebaseAuth = FirebaseAuth.getInstance()
         val firebaseUser = firebaseAuth.currentUser

@@ -3,7 +3,8 @@
 
     <item
         android:id="@+id/personFragment"
-        android:title="Profil" android:icon="@drawable/ic_baseline_person" />
+        android:title="Profil"
+        android:icon="@drawable/ic_baseline_person" />
     <item
         android:id="@+id/qrScannerFragment"
         android:title="Scan code" android:icon="@drawable/ic_baseline_qr_code_scanner_24"/>

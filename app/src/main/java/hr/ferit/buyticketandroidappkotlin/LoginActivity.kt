@@ -26,7 +26,7 @@ import hr.ferit.buyticketandroidappkotlin.databinding.ActivityLoginBinding
 
         //init progress dialog
         progressDialog = ProgressDialog(this)
-        progressDialog.setTitle(("Please wait"))
+        progressDialog.setTitle(("Molimo sačekajte trenutak"))
         progressDialog.setCanceledOnTouchOutside(false)
 
         //login
@@ -36,7 +36,6 @@ import hr.ferit.buyticketandroidappkotlin.databinding.ActivityLoginBinding
         binding.registerBTN.setOnClickListener {
             startActivity(Intent(this,RegisterActivity::class.java))
         }
-
     }
 
      private var email=""
@@ -60,14 +59,12 @@ import hr.ferit.buyticketandroidappkotlin.databinding.ActivityLoginBinding
          progressDialog.show()
 
          firebaseAuth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
-            // startActivity(Intent(this,MainActivity2::class.java))
-             val intent = Intent(this,MainActivity2::class.java)
+             val intent = Intent(this,FragmentHolderActivity::class.java)
              intent.putExtra("Data","")
              startActivity(intent)
          } .addOnFailureListener{
              progressDialog.dismiss()
              Toast.makeText(this,"Neuspješna prijava",Toast.LENGTH_SHORT).show()
-
          }
      }
  }

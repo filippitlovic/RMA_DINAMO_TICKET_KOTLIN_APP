@@ -6,34 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".ui.profile.PersonFragment">
 
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="304dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="86dp"
+        android:layout_marginBottom="9dp"
+        android:src="@drawable/dinamo"
+        app:layout_constraintBottom_toTopOf="@+id/nameDataTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
     <TextView
         android:id="@+id/nameDataTV"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="45dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginBottom="348dp"
         android:text="Ime"
-        android:textStyle="bold|italic"
-        android:textColor="@color/white"
         android:textAlignment="center"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <!-- TODO: Update blank fragment layout -->
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="224dp"
-        android:layout_height="145dp"
-        android:layout_marginBottom="389dp"
-        android:src="@drawable/dinamo"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameDataTV" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -42,8 +44,10 @@
         android:layout_marginTop="100dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.619"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -55,8 +59,8 @@
             android:gravity="center"
             android:paddingTop="30dp"
             android:text="Email:"
-            android:textColor="@color/gray"
-            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             android:textStyle="bold" />
 
         <TextView
@@ -67,10 +71,9 @@
             android:layout_marginTop="10dp"
             android:paddingTop="20dp"
             android:text="Broj bonus bodova:"
-            android:textColor="@color/gray"
-            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             android:textStyle="bold" />
-
 
         <TextView
             android:id="@+id/emailDataTV"
@@ -83,9 +86,9 @@
             android:gravity="center"
             android:paddingTop="30dp"
             android:text="mail"
-            android:textColor="@color/gray"
+            android:textColor="@color/white"
 
-            android:textSize="20dp" />
+            android:textSize="25dp" />
 
         <TextView
             android:id="@+id/bonusPointsDataTV"
@@ -97,9 +100,8 @@
             android:layout_toRightOf="@id/bonusPointsTV"
             android:paddingTop="20dp"
             android:text="0"
-            android:textSize="20dp"
-
-            android:textColor="@color/gray"/>
+            android:textColor="@color/white"
+            android:textSize="25dp" />
 
     </RelativeLayout>
 
@@ -107,12 +109,13 @@
         android:id="@+id/btnCheckPoints"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="84dp"
-        android:text="Pregledaj bonus bodove"
-
+        android:layout_marginBottom="56dp"
         android:backgroundTint="@color/zxing_transparent"
+
+        android:text="Pregledaj skenirane bodove"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
 

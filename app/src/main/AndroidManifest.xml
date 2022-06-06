@@ -16,13 +16,7 @@
             android:name=".RecyclerViewBonusPoints"
             android:exported="false" />
         <activity
-            android:name=".QRScanner"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
-            android:name=".DashboardUserActivity"
+            android:name=".FragmentHolderActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

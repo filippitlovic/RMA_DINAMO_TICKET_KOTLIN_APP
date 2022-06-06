@@ -17,8 +17,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="GNK DINAMO TICKET"
-        android:textSize="20dp"
+        android:text="GNK DINAMO PORTAL"
+        android:textSize="25dp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed"
         android:textColor="@color/white"

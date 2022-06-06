@@ -9,24 +9,22 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import hr.ferit.buyticketandroidappkotlin.databinding.ActivityMain2Binding
+import hr.ferit.buyticketandroidappkotlin.databinding.ActivityFragmentHolderBinding
 
 @Suppress("DEPRECATION")
-class MainActivity2 : AppCompatActivity() {
+class FragmentHolderActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMain2Binding
+    private lateinit var binding: ActivityFragmentHolderBinding
 
     private lateinit var firebaseAuth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
-        binding = ActivityMain2Binding.inflate(layoutInflater)
+        binding = ActivityFragmentHolderBinding.inflate(layoutInflater)
          setContentView(binding.root)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         val navController = findNavController(R.id.fragmentContainerView)
-        //val appBarConfiguration = AppBarConfiguration(setOf(R.id.firstFragment,R.id.secondFragment))
-        //setupActionBarWithNavController(navController,appBarConfiguration)
         bottomNavigationView.setupWithNavController(navController)
 
         firebaseAuth = FirebaseAuth.getInstance()
@@ -34,7 +32,7 @@ class MainActivity2 : AppCompatActivity() {
 
 
         binding.toolbar.logoutBTN.setOnClickListener{
-
+            firebaseAuth.signOut()
             startActivity(Intent(this,LoginActivity::class.java))
         }
     }
@@ -43,15 +41,8 @@ class MainActivity2 : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-/*
-    private fun openScanner() {
-        val intent = Intent(this, QRScanner::class.java)
-        startActivity(intent)
-    }*/
 
-    private fun logoOut() {
-        firebaseAuth.signOut()
-        startActivity(Intent(this, MainActivity::class.java))
-    }
+
+
 
 }

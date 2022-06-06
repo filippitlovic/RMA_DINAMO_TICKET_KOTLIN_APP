@@ -1,9 +1,7 @@
 package hr.ferit.buyticketandroidappkotlin.ui.profile
 
-import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,10 +12,9 @@ import androidx.fragment.app.Fragment
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import com.google.zxing.integration.android.IntentIntegrator
-import hr.ferit.buyticketandroidappkotlin.Bonus
+import hr.ferit.buyticketandroidappkotlin.Model.Bonus
 
 import hr.ferit.buyticketandroidappkotlin.databinding.FragmetQrscannerBinding
-import java.lang.StringBuilder
 
 
 // TODO: Rename parameter arguments, choose names that match

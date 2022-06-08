@@ -9,7 +9,8 @@
   
   <img src="https://user-images.githubusercontent.com/62598112/172637803-fdcaac02-36bb-4cc1-9f43-81f017604ad6.jpg" alt="Profile" width="220" height="450">
   
-  <img src="https://user-images.githubusercontent.com/62598112/172637842-1bf3b569-7907-4ef2-9674-a43d15552540.jpg" alt="QR SCANNER" width="220" height="450">
+  <img src="https://user-images.githubusercontent.com/62598112/172637842-1bf3b569-7907-4ef2-9674-a43d15552540.jpg" alt="QR SCANNER activity" width="220" height="450">
   
+  <img src="https://user-images.githubusercontent.com/62598112/172638109-06065bed-00d2-4ed9-8ba5-ea55448c8d73.jpg" alt="QR SCANNER" width="220" height="450">
   <img src="https://user-images.githubusercontent.com/62598112/172637937-6a3eac71-dd36-4628-8709-57ce02f83c84.jpg" alt="List" width="220" height="450">
 </p>

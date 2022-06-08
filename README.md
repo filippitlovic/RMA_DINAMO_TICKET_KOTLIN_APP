@@ -1,0 +1,1 @@
+# RMA_DINAMO_TICKET_KOTLIN_APP![Screenshot_2022-06-06-21-05-52-367_hr ferit buyticketandroidappkotlin](https://user-images.githubusercontent.com/62598112/172636558-2e2c225f-0a91-4ef0-becb-79f0ddea42f9.jpg)
